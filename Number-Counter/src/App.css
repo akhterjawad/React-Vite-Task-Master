@@ -1,4 +1,4 @@
-/* body {
+body {
   background-color: #f0f4f8;
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -49,4 +49,4 @@
 
 .btn.reset:hover {
   background-color: #c82333;
-} */
+}
