@@ -14,24 +14,24 @@ function App() {
     }
   }
   function resetNum() {
-    if (!num===0) {
-      setNum(num=0)
-    } else {
+    if (num === 0) {
       alert(`number is already reset`)
+    } else {
+      setNum(num = 0)
     }
   }
   console.log(num);
 
   return (
     <>
-    <div className="container">
-      <h1 className="counter">{num}</h1>
-      <div className="button-group">
-        <button className="btn" onClick={addNum}>Add</button>
-        <button className="btn" onClick={lessNum}>Less</button>
-        <button className="btn reset" onClick={resetNum}>Reset</button>
+      <div className="container">
+        <h1 className="counter">{num}</h1>
+        <div className="button-group">
+          <button className="btn" onClick={addNum}>Add</button>
+          <button className="btn" onClick={lessNum}>Less</button>
+          <button className="btn reset" onClick={resetNum}>Reset</button>
+        </div>
       </div>
-    </div>
     </>
   )
 }
