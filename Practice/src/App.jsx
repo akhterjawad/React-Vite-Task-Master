@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 
 // function App() {
@@ -37,27 +37,28 @@ import './App.css'
 // }
 
 function App() {
-  let [num, setNum] = useState(0)
-  function add() {
-    setNum(num + 1)
-    // console.log(num);
-
-  }
-  function less() {
-    setNum(num - 1)
-    // console.log(num);
-  }
-  function reset() {
-    setNum(num = 0)
+  let [todo, settodo]=useState([])
+  let inputVal = useRef() ;
+  function addTodo (event) {
+    event.preventDefault()
+let NewInputVal =inputVal.current.value 
+settodo([NewInputVal,...todo])
+    console.log(inputVal.current.value);
     
   }
-  console.log(num);
   return (
     <>
-      <h1>{num}</h1>
-      <button onClick={add}>add</button>
-      <button onClick={less}>less</button>
-      <button onClick={reset}>reset</button>
+      <form onSubmit={addTodo}>
+        <input type="text" ref={inputVal} />
+        <button type='submit'>add</button>
+      </form>
+      <ul>
+        {todo.map((item,index)=>(
+          <div key={index}>
+            <li>{item}</li>
+          </div>
+        ))}
+      </ul>
     </>
   )
 }

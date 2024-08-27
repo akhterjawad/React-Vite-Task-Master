@@ -38,7 +38,7 @@ function App() {
         >
           <input
             type="text"
-            placeholder="Add a new todo"
+            placeholder="Add a todo"
             ref={inputValue}
             className="form-control me-2"
           />
