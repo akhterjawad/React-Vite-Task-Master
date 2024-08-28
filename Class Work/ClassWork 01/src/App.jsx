@@ -1,3 +1,4 @@
+import Center from './components/center'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -5,8 +6,12 @@ function App() {
   return (
     <>
     <Navbar/>
-    <h1>Center work</h1>
-
+    <Center/>
+    <Center/>
+    <Center/>
+    <Center/>
+    <Center/>
+    <h1>footer</h1>
     </>
   )
 }
