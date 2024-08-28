@@ -37,23 +37,29 @@ import './App.css'
 // }
 
 function App() {
-  let [todo, settodo]=useState([])
-  let inputVal = useRef() ;
-  function addTodo (event) {
+  let [todo, setTodo] = useState([])
+  let InputVal = useRef()
+
+
+  let addTodo = event => {
     event.preventDefault()
-let NewInputVal =inputVal.current.value 
-settodo([NewInputVal,...todo])
-    console.log(inputVal.current.value);
+    let InputValue = InputVal.current.value
+    setTodo([...todo, InputValue])
+    console.log([...todo, InputValue]);
     
+
+    console.log(InputValue);
   }
+
+
   return (
     <>
       <form onSubmit={addTodo}>
-        <input type="text" ref={inputVal} />
+        <input type="text" ref={InputVal} />
         <button type='submit'>add</button>
       </form>
       <ul>
-        {todo.map((item,index)=>(
+        {todo.map((item, index) => (
           <div key={index}>
             <li>{item}</li>
           </div>
