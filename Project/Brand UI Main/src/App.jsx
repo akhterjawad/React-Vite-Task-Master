@@ -1,5 +1,6 @@
 // import './assets/brandL'
 import brand from './assets/brand_logo.png'
+import shoes from './assets/shoe_image.png'
 import './App.css'
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
   return (
     <>
       {/* navbar start */}
-      <nav className='sm:pl-[60px] pl-[10px] pr-[10px] sm:pr-[60px] flex flex-wrap justify-between items-center h-[72px] border  '>
-        <div><img src={brand} className='w-[58px] h-[30px] sm:h-[40px] sm:w-[75px]' alt="" /></div>
+      <nav className='sm:pl-[60px] pl-[10px] pr-[10px] sm:pr-[60px] flex flex-wrap justify-between items-center h-[72px]  '>
+        <div><img src={brand} className='w-[58px]  sm:w-[75px]' alt="" /></div>
         <div className=' hidden sm:flex flex flex-wrap justify-center items-center'>
           <a href="#" className='lg:tooltip" data-tip="hello'><span className='btn bg-white border-none font-bold'>MENU</span></a>
           <a href="#" className='lg:tooltip" data-tip="hello'><span className='btn bg-white border-none font-bold'>LOCATION</span></a>
@@ -67,7 +68,14 @@ function App() {
         </ul>
         <div><button className='bg-[#D01C28] text-white w-[4rem]'>Login</button></div>
       </nav>
+
       {/* navbar end */}
+
+      <main>
+        <div className='flex flex-wrap justify-center mt-10 '><p className=' below-sm:text-[5rem] text-[4rem] font-bold'>YOUR FEET<br />DESERVE<br />THE BEST</p>
+          <div className=''><img className='w-[450px] mt-14' src={shoes} alt="shoes-img" /></div>
+        </div>
+      </main>
     </>
   )
 }
