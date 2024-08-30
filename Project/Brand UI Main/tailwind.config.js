@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'below-sm': {'min': '500px'}, // Custom screen for below 'sm'
+        'below-sm': {'min': '500px'},
+        'below-md': '900px', // Custom screen for below 'sm'
       },
     },
   },

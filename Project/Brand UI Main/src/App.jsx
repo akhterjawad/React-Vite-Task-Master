@@ -66,15 +66,27 @@ function App() {
             </a>
           </li>
         </ul>
-        <div><button className='bg-[#D01C28] text-white w-[4rem]'>Login</button></div>
+        <div><button className='bg-[#D01C28] text-white w-[4rem] rounded pb-[3px]'>Login</button></div>
       </nav>
 
       {/* navbar end */}
 
+
+      {/* main work start */}
+
       <main>
-        <div className='flex flex-wrap justify-center mt-10 '><p className=' below-sm:text-[5rem] text-[4rem] font-bold'>YOUR FEET<br />DESERVE<br />THE BEST</p>
-          <div className=''><img className='w-[450px] mt-14' src={shoes} alt="shoes-img" /></div>
+        <div className='flex flex-wrap justify-center mt-10 '><p className=' below-sm:text-[5rem] text-[4rem] font-black text-black leading-none'>YOUR FEET<br />DESERVE<br />THE BEST</p>
+          <div className=''><img className='w-[450px] mt-[5px] below-md:mt-14' src={shoes} alt="shoes-img" /></div>
         </div>
+        <div className='below-md:absolute flex flex-col justify-center items-center bottom-[24%] right-[47%] static'>
+          <div className='font-semibold text-center below-md:text-start'>
+            <p>YOUR FEET DESERVE THE BEST CARE AND COMFORT EVERY DAY.</p>
+            <p>WHETHER YOU'RE WALKING, RUNNING, OR RELAXING, TREAT</p>
+            <p>YOUR FEET TO PREMIUM QUALITY SHOES THAT PROVIDE</p>
+            <p>SUPERIOR SUPPORT AND STYLE.</p>
+          </div>
+        </div>
+
       </main>
     </>
   )

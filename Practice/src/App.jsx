@@ -36,37 +36,37 @@ import './App.css'
 //   )
 // }
 
-function App() {
-  let [todo, setTodo] = useState([])
-  let InputVal = useRef()
+// function App() {
+//   let [todo, setTodo] = useState([])
+//   let InputVal = useRef()
 
 
-  let addTodo = event => {
-    event.preventDefault()
-    let InputValue = InputVal.current.value
-    setTodo([...todo, InputValue])
-    console.log([...todo, InputValue]);
+//   let addTodo = event => {
+//     event.preventDefault()
+//     let InputValue = InputVal.current.value
+//     setTodo([...todo, InputValue])
+//     console.log([...todo, InputValue]);
     
 
-    console.log(InputValue);
-  }
+//     console.log(InputValue);
+//   }
 
 
-  return (
-    <>
-      <form onSubmit={addTodo}>
-        <input type="text" ref={InputVal} />
-        <button type='submit'>add</button>
-      </form>
-      <ul>
-        {todo.map((item, index) => (
-          <div key={index}>
-            <li>{item}</li>
-          </div>
-        ))}
-      </ul>
-    </>
-  )
-}
+//   return (
+//     <>
+//       <form onSubmit={addTodo}>
+//         <input type="text" ref={InputVal} />
+//         <button type='submit'>add</button>
+//       </form>
+//       <ul>
+//         {todo.map((item, index) => (
+//           <div key={index}>
+//             <li>{item}</li>
+//           </div>
+//         ))}
+//       </ul>
+//     </>
+//   )
+// }
 
 export default App
