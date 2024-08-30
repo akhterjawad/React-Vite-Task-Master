@@ -8,7 +8,7 @@ export default {
     extend: {
       screens: {
         'below-sm': {'min': '500px'},
-        'below-md': '900px', // Custom screen for below 'sm'
+        'below-md': '973px', // Custom screen for below 'sm'
       },
     },
   },

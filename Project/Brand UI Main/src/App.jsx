@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       {/* navbar start */}
-      <nav className='sm:pl-[60px] pl-[10px] pr-[10px] sm:pr-[60px] flex flex-wrap justify-between items-center h-[72px]  '>
+      <nav className='sm:pl-[10px] mx-auto max-w-7xl pl-[10px] pr-[10px] sm:pr-[10px] flex flex-wrap justify-between items-center h-[72px]  '>
         <div><img src={brand} className='w-[58px]  sm:w-[75px]' alt="" /></div>
         <div className=' hidden sm:flex flex flex-wrap justify-center items-center'>
           <a href="#" className='lg:tooltip" data-tip="hello'><span className='btn bg-white border-none font-bold'>MENU</span></a>
@@ -75,10 +75,10 @@ function App() {
       {/* main work start */}
 
       <main>
-        <div className='flex flex-wrap justify-center mt-10 '><p className=' below-sm:text-[5rem] text-[4rem] font-black text-black leading-none'>YOUR FEET<br />DESERVE<br />THE BEST</p>
-          <div className=''><img className='w-[450px] mt-[5px] below-md:mt-14' src={shoes} alt="shoes-img" /></div>
+        <div className='flex flex-wrap ml-10 justify-center mt-10 '><p className=' below-sm:text-[5rem] text-[4rem] font-black text-black leading-none'>YOUR FEET<br />DESERVE<br />THE BEST</p>
+          <div className=''><img className='w-[450px] ml-9 mt-[5px] below-md:mt-14' src={shoes} alt="shoes-img" /></div>
         </div>
-        <div className='below-md:absolute flex flex-col justify-center items-center bottom-[24%] right-[47%] static'>
+        <div className='below-md:absolute flex flex-col justify-center items-center bottom-[21%] right-[47%] static'>
           <div className='font-semibold text-center below-md:text-start'>
             <p>YOUR FEET DESERVE THE BEST CARE AND COMFORT EVERY DAY.</p>
             <p>WHETHER YOU'RE WALKING, RUNNING, OR RELAXING, TREAT</p>
