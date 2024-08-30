@@ -7,10 +7,10 @@ import '../App.css'
 const Navbar = () => {
   return (
     <>
-      
-       {/* navbar start */}
-      
-       <nav className='sm:pl-[10px] mx-auto max-w-7xl pl-[10px] pr-[10px] sm:pr-[10px] flex flex-wrap justify-between items-center h-[72px]  '>
+
+      {/* navbar start */}
+
+      <nav className='sm:pl-[10px] mx-auto max-w-7xl pl-[10px] pr-[10px] sm:pr-[10px] flex flex-wrap justify-between items-center h-[72px]  '>
         <div><img src={brand} className='w-[58px]  sm:w-[75px]' alt="" /></div>
         <div className=' hidden sm:flex flex flex-wrap justify-center items-center'>
           <a href="#" className='lg:tooltip" data-tip="hello'><span className='btn bg-white border-none shadow-none font-bold'>MENU</span></a>
