@@ -6,7 +6,7 @@
         <a href="https://num-counter-with-react.netlify.app/">Counter-with-React + Vite + JS</a><span> "My First React Assignment Counter App: Developed with JavaScript, React.js, and Vite."</span>
     </li>
     <li>
-        <a href="https://todo-app-with-react-and-vite.netlify.app/">Todo-App-with-React + Vite + JS</a><span> "An efficient To-Do App crafted with React.JS, using HTML, CSS, JavaScript, and Bootstrap for a smooth user experience. Keep tasks simple and stay organized!"</span>
+        <a href="https://todo-app-with-react-and-vite.netlify.app/">Todo-App-with-React + Vite + JS</a><span> "An efficient To-Do App crafted with React.JS, using HTML5, CSS3, JavaScript, and Bootstrap5 for a smooth user experience. Keep tasks simple and stay organized!"</span>
     </li>
     <li>
         <a href="https://brand-ui-main.netlify.app/">Brand-UI-with-React + Vite + JS</a><span> "An elegant and fully responsive website crafted with React, Vite, JavaScript, TailwindCSS, and DaisyUI for a sleek user experience."</span>
