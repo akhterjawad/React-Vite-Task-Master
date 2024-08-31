@@ -29,7 +29,7 @@ let App = () => {
                     <div key={index}>
                         <li>{item}</li>
                         <button onClick={() => deleteTodo(index)}>delete</button>
-                        {/* <button onClick={edit}>edit</button> */}
+                        {/* <button onClick={edit}>editd</button> */}
                     </div>
                 ))}
             </ul>
