@@ -46,7 +46,7 @@ import './App.css'
 //     let InputValue = InputVal.current.value
 //     setTodo([...todo, InputValue])
 //     console.log([...todo, InputValue]);
-    
+
 
 //     console.log(InputValue);
 //   }
@@ -68,5 +68,29 @@ import './App.css'
 //     </>
 //   )
 // }
+const App = () => {
+    let [num, setnum] = useState(0)
+
+    function add() {
+        setnum(num + 1)
+    }
+    function less() {
+        setnum(num - 1)
+    }
+    function reset() {
+        setnum(0)
+    }
+
+    return (
+        <>
+        <div>{num}</div>
+            <button onClick={add}>add</button>
+            <button onClick={less}>less</button>
+            <button onClick={reset}>reset</button>
+
+        </>
+    )
+}
+
 
 export default App
