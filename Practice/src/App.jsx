@@ -68,26 +68,43 @@ import './App.css'
 //     </>
 //   )
 // }
-const App = () => {
-    let [num, setnum] = useState(0)
+// const App = () => {
+//     let [num, setnum] = useState(0)
 
-    function add() {
-        setnum(num + 1)
-    }
-    function less() {
-        setnum(num - 1)
-    }
-    function reset() {
-        setnum(0)
-    }
+//     function add() {
+//         setnum(num + 1)
+//     }
+//     function less() {
+//         setnum(num - 1)
+//     }
+//     function reset() {
+//         setnum(0)
+//     }
 
+//     return (
+//         <>
+//         <div>{num}</div>
+//             <button onClick={add}>add</button>
+//             <button onClick={less}>less</button>
+//             <button onClick={reset}>reset</button>
+
+//         </>
+//     )
+// }
+function App() {
+    // let []= useState()
+    let inputV=useRef()
+    function addTodo(event) {
+        event.preventDefault()
+        console.log(inputV.current.value);
+
+    }
     return (
         <>
-        <div>{num}</div>
-            <button onClick={add}>add</button>
-            <button onClick={less}>less</button>
-            <button onClick={reset}>reset</button>
-
+            <form onSubmit={addTodo}>
+                <input type="text" ref={inputV} />
+                <button>add</button>
+            </form>
         </>
     )
 }
