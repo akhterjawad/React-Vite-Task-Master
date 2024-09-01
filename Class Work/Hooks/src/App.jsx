@@ -45,9 +45,6 @@ import { useState, useRef, useEffect } from 'react'
 //   }
 // }
 
-// export default App;
-
-
 
 
 
@@ -55,20 +52,17 @@ import { useState, useRef, useEffect } from 'react'
 
 // Hum useState React mein is liye use karte hain kyun ke yeh humein functional components mein state manage karne ka tareeqa faraham karta hai. Iska matlab yeh hai ke aap apni app ke andar variables ya data ko store kar sakte hain jo ke dynamically change hota hai, jaise user input ya kisi action ke result mein. useState ke through aap initial state set karte hain aur phir usko update karne ke liye ek function milta hai. Yeh React apps ko interactive aur dynamic banata hai.
 
-import React, { useState } from 'react';
 
-function App() {
-  const [name, setName] = useState('Mia');
+// function App() {
+//   const [name, setName] = useState('Mia');
 
-  return (
-    <div>
-      <h1>Hello, {name}!</h1>
-      <button onClick={() => setName('React Developer')}>Change Name</button>
-    </div>
-  );
-}
-
-export default App;
+//   return (
+//     <div>
+//       <h1>Hello, {name}!</h1>
+//       <button onClick={() => setName('React Developer')}>Change Name</button>
+//     </div>
+//   );
+// }
 
 
 
