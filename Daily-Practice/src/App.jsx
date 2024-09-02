@@ -60,12 +60,13 @@ import './App.css'
 // export default App
 
 import React from 'react'
+import Navbar from './Components/Navbar'
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Navbar/>
+    </>
   )
 }
 
