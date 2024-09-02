@@ -120,15 +120,13 @@ import { useState, useRef, useEffect } from 'react'
 
 // const App = () => {
 
-
 //   const [countAdd, setCountAdd] = useState(0);
 //   const [countLess, setCountLess] = useState(0)
-
 
 // // useEffect function 
 
 //   useEffect(() => { 
-//     console.log(`kjj`);
+//     console.log(`useEffect run`);
 //   },[countAdd]); // Dependency array
 
 //   return (
@@ -190,7 +188,7 @@ function App() {
   return (
     <>
       <h1>Hello world!</h1>
-      {array.length > 0 ? (
+      {/* {array.length > 0 ? (
         array.map((item) => {
           return (
             <div key={item.id}>
@@ -200,7 +198,12 @@ function App() {
         })
       ) : (
         <h1>Loading...</h1>
-      )}
+      )} */}
+      {array.length ? array.map((item) => {
+        return <div key={item.id}>
+          <p>{item.name}</p>
+        </div>
+      }) : <h1>Loading...</h1>}
     </>
   );
 }
