@@ -1,5 +1,6 @@
 import Card from './components/Card'
 import Center from './components/center'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './index.css'
 
@@ -29,6 +30,7 @@ function App() {
 
       </div>
       <h1>footer</h1>
+      <Footer title="vip" description='VIP in karachi' price='12300' />
     </>
   )
 }

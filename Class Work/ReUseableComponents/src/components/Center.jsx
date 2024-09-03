@@ -1,7 +1,7 @@
 function Center() {
-    return(
+    return (
         <>
-        <h1>mainwork</h1>
+            <h1>mainwork</h1>
         </>
     )
 }
