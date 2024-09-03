@@ -1,8 +1,5 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul><li>
+            <a href="https://mj-store-ultra.netlify.app/">MJ-Store UI with-React + Vite + JS</a><span> "A sleek and responsive e-commerce app UI built with React, Vite, TailwindCSS, and Flowbite for an engaging shopping experience."</span>
+        </li></ul>
