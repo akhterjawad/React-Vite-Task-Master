@@ -1,8 +1,5 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul><li>
+            <a href="https://todo-app-with-react-and-vite.netlify.app/">Todo-App-with-React + Vite + JS</a><span> "An
+                efficient To-Do App crafted with React.JS, using HTML5, CSS3, JavaScript, and Bootstrap5 for a smooth
+                user experience. Keep tasks simple and stay organized!"</span>
+        </li></ul>
