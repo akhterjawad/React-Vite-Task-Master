@@ -5,6 +5,22 @@ function App() {
   let [num, setNum] = useState(0)
   function addNum() {
     setNum(num + 1)
+
+
+    // agar aap 1 dafama 2 bar setNum ka function run karna chata ha to nicha diagay tarika sa nahi hoga
+    setNum(num + 1)
+    setNum(num + 1)
+
+
+    // agar aap 1 dafama 2 bar setNum ka function run karna chata ha to nicha diagay tarika sa hojayga but bad practice ha.
+    setNum(num += 1)
+    setNum(num += 1)
+
+
+    // agar aap 1 dafama 2 bar setNum ka function run karna chata ha to nicha diagay tarika sa hojayga or ya good practice ha.
+    setNum(prevVal => prevVal + 1);
+    setNum(prevVal => prevVal + 1);
+
   }
   function lessNum() {
     if (num === 0) {
@@ -25,7 +41,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1 className="counter">{num}</h1>
+        <h1 className="numer">{num}</h1>
         <div className="button-group">
           <button className="btn" onClick={addNum}>Add</button>
           <button className="btn" onClick={lessNum}>Less</button>
