@@ -37,7 +37,6 @@ import './App.css'
 //     )
 // }
 
-
 // export default App
 
 
@@ -56,16 +55,40 @@ import './App.css'
 //         </>
 //     )
 // }
+// export default App
 
+// const App = () => {
+//   return (
+//     <>
+//       <Navbar/>
+//     </>
+//   )
+// }
 // export default App
 
 import React from 'react'
-import Navbar from './Components/Navbar'
 
 const App = () => {
+  let [count, setcount] = useState(0)
+  function add() {
+
+    // agar aap 1 dafama 2 bar setcount ka function run karna chata ha to nicha diagay tarika sa nahi hoga
+    setcount(count + 1)
+    setcount(count + 1)
+
+
+    // agar aap 1 dafama 2 bar setcount ka function run karna chata ha to nicha diagay tarika sa hojayga but bad practice ha.
+    setcount(count += 1)
+    setcount(count += 1)
+
+
+    // agar aap 1 dafama 2 bar setcount ka function run karna chata ha to nicha diagay tarika sa hojayga or ya good practice ha.
+    setcount(prevVal => prevVal + 1);
+    setcount(prevVal => prevVal + 1);
+  }
   return (
     <>
-      <Navbar/>
+      <button onClick={add}>added {count}</button>
     </>
   )
 }
