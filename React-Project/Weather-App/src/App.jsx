@@ -34,7 +34,7 @@ const App = () => {
 
     return (
         <>
-            <h1 className='text-center mt-5  font-semibold text-[2.5rem]'>Weather App</h1>
+            <h1 className='text-center mt-5  font-semibold text-[1.8rem]  sm:text-[2.5rem]'>Weather App</h1>
             <form className='ml-2 mr-2 flex gap-3 justify-center items-center mt-2' onSubmit={checkStatus}>
                 <input type="text" className="input input-bordered input-accent w-full max-w-xs" placeholder='Enter city name!' ref={inputRef} />
                 <button className="btn hover:bg-[green] border-none  bg-[#23ff23]">Success</button>
