@@ -25,7 +25,7 @@ const App = () => {
                 console.log(addweather);
             }).catch(error => {
                 console.log(error);
-                alert(`please check your internet connection`)
+                alert(`please check your internet connection or Invalid city name`)
             })
         // }
         // getdata()

@@ -6,7 +6,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
     /* content: ""; */
     position: absolute;
     background: url('https://firebasestorage.googleapis.com/v0/b/image-to-url-converter-9483c.appspot.com/o/akhternadeem566%40gmail.com%20%2B%201725546362062?alt=media&token=f3b2d146-e884-4610-a274-83712dc2ae3b')no-repeat center fixed;
