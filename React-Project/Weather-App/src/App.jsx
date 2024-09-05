@@ -43,7 +43,7 @@ const App = () => {
             <div className="flex flex-wrap justify-center items-center gap-5">
                 {(
                     addweather.map((item, index) => (
-                        <div key={index} className="card mt-12 ml-3 mr-3 w-[350px] bg-blue-500 bg-opacity-30 backdrop-blur-sm text-white shadow-lg rounded-lg p-5">
+                        <div key={index} className="card mt-12 ml-3 mr-3 w-[350px] bg-green-500 bg-opacity-30 backdrop-blur-sm text-white shadow-lg rounded-lg p-5">
                             <h2 className="text-2xl font-semibold mb-2">{item.location.name}, {item.location.country}</h2>
                             <p className="text-lg">Temperature: {item.current.temp_c}°C</p>
                             <p className="text-lg">Condition: {item.current.condition.text}</p>
