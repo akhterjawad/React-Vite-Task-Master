@@ -1,3 +1,6 @@
+import React from 'react'
+import { useRef, useState, useEffect } from 'react'
+import './App.css'
 
 
 
@@ -126,44 +129,73 @@
 //   )
 // }
 
-import React from 'react'
-import { useRef, useState, useEffect } from 'react'
-import './App.css'
 
-const App = () => {
-    const [data, setData] = useState(null);
+// const App = () => {
+//     const [data, setData] = useState(null);
 
-    // useEffect(() => {
-    //     async function getData() {
-    //         const res = await fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json())
-    //             .then(json => {
-    //                 console.log(json)
-    //             })
-    //         setData(res);
+// // Tumhari API baar baar call ho rahi hai kyunke tum getData() function ko bina kisi condition ke call kar rahe ho. Jab bhi component render hota hai ya state update hoti hai, yeh function phir se run hota hai, is wajah se API call bar bar hoti hai.
 
-    //     }
-    //     getData()
-    // }, [])
-
-    useEffect(() => {
-        async function getData() {
-            const response = await fetch("https://jsonplaceholder.typicode.com/users");
-            const res = await response.json();
-            console.log(res);
-            setData(res);
-        }
-        getData()
-    }, [])
-    return (
-        <>
-            {data ? data.map(item => (
-                <h1 key={item.id}>{item.name}</h1>
-            )) : <p>loading</p>}
+//         async function getData() {
+//             const res = await fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json())
+//                 .then(json => {
+//                     console.log(json)
+//                     setData(json);
+//                 })
+//         }
+//         getData()
 
 
 
-        </>
-    )
-}
+// blow code is OK
 
-export default App
+//     // useEffect(() => {
+//     //     async function getData() {
+//     //         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     //         const res = await response.json();
+//     //         console.log(res);
+//     //         setData(res);
+//     //     }
+//     //     getData()
+//     // }, [])
+//     return (
+//         <>
+//             {data ? data.map(item => (
+//                 <h1 key={item.id}>{item.name}</h1>
+//             )) : <p>loading</p>}
+//         </>
+//     )
+// }
+
+// export default App
+
+
+
+
+
+// const App = () => {
+
+//     const [data, setData] = useState(null);
+
+// Tumhari API baar baar is liye call nahi ho rahi kyunke tum fetch() ko kisi lifecycle hook (jaise useEffect) mein nahi rakh rahe ho ya tumhara code sirf ek baar run ho raha hai jab page ya component load hota hai. Agar tum yeh code kisi function ke andar call karte ho jo continuously rerun nahi hota, toh API bhi sirf ek baar hi call hogi.
+  
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//       .then(response => response.json())
+//       .then(json => {
+//         console.log(json);
+//         setData(json)
+//       }).catch(err => console.log(err));
+  
+  
+//     return (
+//       <>
+//         {data ? data.map((item) => {
+//           return <div key={item.id}>
+//             <p>{item.name}</p>
+//           </div>
+//         }) : <h1>Loading...</h1>}
+//       </>
+//     );
+//   };
+  
+  // export default App;
+  
