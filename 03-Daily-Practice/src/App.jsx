@@ -1,5 +1,3 @@
-import { useRef, useState } from 'react'
-import './App.css'
 
 
 
@@ -128,5 +126,44 @@ import './App.css'
 //   )
 // }
 
+import React from 'react'
+import { useRef, useState, useEffect } from 'react'
+import './App.css'
+
+const App = () => {
+    const [data, setData] = useState(null);
+
+    // useEffect(() => {
+    //     async function getData() {
+    //         const res = await fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json())
+    //             .then(json => {
+    //                 console.log(json)
+    //             })
+    //         setData(res);
+
+    //     }
+    //     getData()
+    // }, [])
+
+    useEffect(() => {
+        async function getData() {
+            const response = await fetch("https://jsonplaceholder.typicode.com/users");
+            const res = await response.json();
+            console.log(res);
+            setData(res);
+        }
+        getData()
+    }, [])
+    return (
+        <>
+            {data ? data.map(item => (
+                <h1 key={item.id}>{item.name}</h1>
+            )) : <p>loading</p>}
+
+
+
+        </>
+    )
+}
 
 export default App
