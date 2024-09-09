@@ -46,6 +46,10 @@ const router = createBrowserRouter([
         element: <Services />
       },
       {
+        path: "singleStudent/:id",
+        element: <SingleStudent />
+      },
+      {
         path: "*",
         element: <h1>Not found!</h1>
       }
