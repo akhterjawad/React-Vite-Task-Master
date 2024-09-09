@@ -89,46 +89,44 @@ import './App.css'
 // }
 
 
-import React from 'react'
-
-const App = () => {
-  let [todo, setTodo] = useState([])
-  let inputVal = useRef()
-  function Add(event) {
-    event.preventDefault()
-    console.log(inputVal.current.value);
-    // todo.push(inputVal.current.value)
-    setTodo([...todo, inputVal.current.value])
-    inputVal.current.value = ``
-  }
-  function deleted(i) {
-    todo.splice(i, 1)
-    setTodo([...todo])
-  }
-  function edit(i) {
-    let updateVal = prompt(`.`)
-    todo.splice(i, 1, updateVal)
-    setTodo([...todo])
-  }
-  return (
-    <>
-      <form onSubmit={Add}>
-        <input type="text" ref={inputVal} />
-        <button>addTodo</button>
-      </form>
-      <ul>
-        {todo.map((item, index) => (
-          <li key={index}>{item}
-            <div>
-              <button onClick={() => deleted(index)}>deleted</button>
-              <button onClick={() => edit(index)}>edit</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </>
-  )
-}
+// const App = () => {
+//   let [todo, setTodo] = useState([])
+//   let inputVal = useRef()
+//   function Add(event) {
+//     event.preventDefault()
+//     console.log(inputVal.current.value);
+//     // todo.push(inputVal.current.value)
+//     setTodo([...todo, inputVal.current.value])
+//     inputVal.current.value = ``
+//   }
+//   function deleted(i) {
+//     todo.splice(i, 1)
+//     setTodo([...todo])
+//   }
+//   function edit(i) {
+//     let updateVal = prompt(`.`)
+//     todo.splice(i, 1, updateVal)
+//     setTodo([...todo])
+//   }
+//   return (
+//     <>
+//       <form onSubmit={Add}>
+//         <input type="text" ref={inputVal} />
+//         <button>addTodo</button>
+//       </form>
+//       <ul>
+//         {todo.map((item, index) => (
+//           <li key={index}>{item}
+//             <div>
+//               <button onClick={() => deleted(index)}>deleted</button>
+//               <button onClick={() => edit(index)}>edit</button>
+//             </div>
+//           </li>
+//         ))}
+//       </ul>
+//     </>
+//   )
+// }
 
 
 export default App
