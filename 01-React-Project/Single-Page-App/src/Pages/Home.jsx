@@ -24,7 +24,7 @@ const Home = () => {
     }
     return (
         <>
-            <div className='flex flex-wrap gap-3 items-center justify-center'>
+            <div className=' mt-5 pb-5 flex flex-wrap gap-3 items-center justify-center'>
                 {
                     data ? data.map((item) => {
                         return <div key={item.id} className="w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[25.3rem]">
