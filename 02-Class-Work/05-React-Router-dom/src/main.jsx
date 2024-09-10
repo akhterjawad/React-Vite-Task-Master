@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Services from './pages/Services.jsx'
+import SingleStudent from './Pages/SingleStudent.jsx'
 
 // protected route
 // dynamic route
