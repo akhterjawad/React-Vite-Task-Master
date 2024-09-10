@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul><li>
+   <a href="https://single-page-web-site.netlify.app/">Single-Page-Web-with-React + Vite + JS</a><span> "Discover a seamless browsing experience with our elegant single-page web app, crafted with React, HTML5, CSS3, and TailwindCSS. Enjoy a modern, responsive design that ensures smooth performance and effortless navigation, all while delivering a visually appealing and user-friendly interface."</span></ul>

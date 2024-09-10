@@ -16,6 +16,9 @@
             <a href="https://weather-app-ultra.netlify.app/">Weather-App-with-React + Vite + JS</a><span> "Experience real-time weather updates with this sleek, responsive app built using React, HTML5, CSS3, and TailwindCSS for seamless performance and modern design."</span>
         </li><br />
         <li>
+            <a href="https://single-page-web-site.netlify.app/">Single-Page-Web-with-React + Vite + JS</a><span> "Discover a seamless browsing experience with our elegant single-page web app, crafted with React, HTML5, CSS3, and TailwindCSS. Enjoy a modern, responsive design that ensures smooth performance and effortless navigation, all while delivering a visually appealing and user-friendly interface."</span>
+        </li><br />
+        <li>
             <a href="https://mj-store-ultra.netlify.app/">MJ-Store UI with-React + Vite + JS</a><span> "A sleek and responsive e-commerce app UI built with React, Vite, TailwindCSS, and Flowbite for an engaging shopping experience."</span>
         </li><br />
         <li>
