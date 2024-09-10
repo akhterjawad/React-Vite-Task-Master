@@ -2,10 +2,10 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
+import SingleStudent from './Pages/SingleStudent.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Services from './pages/Services.jsx'
-import SingleStudent from './Pages/SingleStudent.jsx'
 
 // protected route
 // dynamic route
