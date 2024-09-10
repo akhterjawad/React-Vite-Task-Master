@@ -20,7 +20,7 @@ const Home = () => {
     }, [])
 
     const singleUser = (item) => {
-        navigate(`singleprodduct/${item.id}`)
+        navigate(`SingleProduct/${item.id}`)
     }
     return (
         <>
