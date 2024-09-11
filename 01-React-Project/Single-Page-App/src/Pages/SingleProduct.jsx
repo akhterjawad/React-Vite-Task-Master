@@ -110,7 +110,7 @@ const SingleProduct = () => {
   </div>
 </div> */}
             </>
-            ) : (<img className=" m-[auto] loading w-[10%] mt-48" src={loading} alt="no img"></img>)}</div>
+            ) : (<img className=" m-[auto] loading w-[10%] mt-24 mb-24" src={loading} alt="no img"></img>)}</div>
         </>
     )
 }
