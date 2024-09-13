@@ -178,15 +178,15 @@ import './App.css'
 //     const [data, setData] = useState(null);
 
 // Tumhari API baar baar is liye call nahi ho rahi kyunke tum fetch() ko kisi lifecycle hook (jaise useEffect) mein nahi rakh rahe ho ya tumhara code sirf ek baar run ho raha hai jab page ya component load hota hai. Agar tum yeh code kisi function ke andar call karte ho jo continuously rerun nahi hota, toh API bhi sirf ek baar hi call hogi.
-  
+
 //     fetch('https://jsonplaceholder.typicode.com/users')
 //       .then(response => response.json())
 //       .then(json => {
 //         console.log(json);
 //         setData(json)
 //       }).catch(err => console.log(err));
-  
-  
+
+
 //     return (
 //       <>
 //         {data ? data.map((item) => {
@@ -197,11 +197,11 @@ import './App.css'
 //       </>
 //     );
 //   };
-  
-  // export default App;
-  
-  const App = () => {
-   const [quizQuestion, setquizQuestion] = useState([])
+
+// export default App;
+
+const App = () => {
+    const [quizQuestion, setquizQuestion] = useState([])
     const [questionIndex, setQuestionIndex] = useState(0)
     const [choices, setChoices] = useState([])
     const [selectedChoice, setSelectedChoice] = useState('')
@@ -238,14 +238,14 @@ import './App.css'
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1))
-            ;[array[i], array[j]] = [array[j], array[i]]
+                ;[array[i], array[j]] = [array[j], array[i]]
         }
         return array
     }
 
     return (
-      <>
-        
+        <>
+
             <div>
                 {quizQuestion.length > 0 ? (
                     <h1>
@@ -271,9 +271,8 @@ import './App.css'
                 ))}
             </form>
             <button onClick={nextBtn}>Next</button>
-      </>
+        </>
     )
-  }
-  
-  export default App
-  
+}
+
+export default App
