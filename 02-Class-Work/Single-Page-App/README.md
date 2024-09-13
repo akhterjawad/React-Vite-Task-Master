@@ -1,2 +1,0 @@
-<ul><li>
-   <a href="https://single-page-web-site.netlify.app/">Single-Page-Web-with-React + Vite + JS</a><span> "Discover a seamless browsing experience with our elegant single-page web app, crafted with React, HTML5, CSS3, and TailwindCSS. Enjoy a modern, responsive design that ensures smooth performance and effortless navigation, all while delivering a visually appealing and user-friendly interface."</span></ul>
