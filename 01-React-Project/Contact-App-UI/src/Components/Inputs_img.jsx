@@ -132,7 +132,7 @@ const Inputs_img = () => {
               sx={{
                 backgroundColor: 'black',
                 color: 'white',
-                marginBottom:'10px',
+                marginBottom: '10px',
                 fontSize: { xs: '0.7rem', sm: '0.8rem' },
                 width: '12rem',
                 marginLeft: { xs: '1.5rem', sm: '26rem' },
@@ -144,7 +144,9 @@ const Inputs_img = () => {
             </Button>
           </div>
         </div>
-        <img className='w-[90%] sm:w-[40%] mr-20' src={Center_img} alt="no img" />
+        <div className='flex justify-center items-center'>
+          <img className='w-[70%] sm:w-[90%]' src={Center_img} alt="no img" />
+        </div>
       </div>
     </>
   )
