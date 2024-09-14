@@ -8,7 +8,7 @@ import Center_img from '../assets/Service 24_7-pana 1.svg'
 const Inputs_img = () => {
   return (
     <>
-      <div className='flex flex-wrap justify-between items-center flex-wrap-reverse'>
+      <div className='flex justify-between items-center flex-wrap-reverse'>
         <div>
           <div>
             <Stack spacing={2} direction="row" justifyContent="start" sx={{
