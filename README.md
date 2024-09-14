@@ -25,6 +25,9 @@
             <a href="https://mj-store-ultra.netlify.app/">MJ-Store UI with-React + Vite + JS</a><span> "A sleek and responsive e-commerce app UI built with React, Vite, TailwindCSS, and Flowbite for an engaging shopping experience."</span>
         </li><br />
         <li>
+            <a href="https://contact-ui-ultra.netlify.app/">Contact-UI with-React + Vite + JS</a><span> "A clean and responsive contact app UI designed with React, Vite, daisyUI, TailwindCSS, and MaterialUI for seamless user interactions."</span>
+        </li><br />
+        <li>
             <a href="https://brand-ui-main.netlify.app/">Brand-UI-with-React + Vite + JS</a><span> "An elegant and fully
                 responsive website crafted with React, Vite, JavaScript, TailwindCSS, and DaisyUI for a sleek user
                 experience."</span>
