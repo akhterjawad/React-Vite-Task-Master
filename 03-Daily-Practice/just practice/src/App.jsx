@@ -245,7 +245,6 @@ const App = () => {
 
     return (
         <>
-
             <div>
                 {quizQuestion.length > 0 ? (
                     <h1>
