@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import loading from '../assets/loading.gif';
-import bg_img from '../assets/store-clothing-shop-bouique1.jpg'
+import bg_img from '../assets/NEW-BANNER-06-scaled-0x0.webp'
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <>
-            {/* <img src={bg_img} className='w-[100%] h-auto' alt="no img" /> */}
+            <img src='https://zarestyle.com/wp-content/uploads/2024/04/NEW-BANNER-06-scaled-0x0.webp' className='w-[100%] h-auto' alt="no img" />
             {/* <h1 className='relative text-[#ffe4c4] bottom-[400px] text-center font-bold md:text-[3rem] text-xl'>Elevate Your Wardrobe <br /> <br /> with the Best Trends</h1> */}
             <h1 className='text-center sm:mt-4 mt-1 font-extrabold sm:text-4xl text-xl'>Flash Sale</h1>
 

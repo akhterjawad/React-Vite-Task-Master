@@ -1,5 +1,6 @@
 import React from 'react'
 
+import logo from '../assets/ZARE-STYLE-LOGO1.png'
 const Footer = () => {
     return (
         <>
@@ -9,7 +10,7 @@ const Footer = () => {
                         <div className="mb-6 md:mb-0">
                             <a href="https://flowbite.com/" className="flex items-center">
                                 <img
-                                    src="https://flowbite.com/docs/images/logo.svg"
+                                    src={logo}
                                     className="h-8 me-3"
                                     alt="FlowBite Logo"
                                 />

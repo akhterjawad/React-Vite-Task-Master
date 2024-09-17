@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import logo from '../assets/ZARE-STYLE-LOGO1.png'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,12 +14,11 @@ const Navbar = () => {
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
                         <img
-                            src="https://flowbite.com/docs/images/logo.svg"
-                            className="h-8"
+                            src={logo}
+                            className="h-8 w-20"
                             alt="Flowbite Logo"
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        zarestyle
                         </span>
                     </span>
                     <button
