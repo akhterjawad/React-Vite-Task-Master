@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
-// import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-// import  {auth}  from "../Config/firebaseconfig"
+import  {auth}  from "../Config/firebaseconfig"
 const ProtectedRoutes = ({ component }) => {
-  // const auth = getAuth();
-  const [userLoggedIn, setuserLoggedIn] = useState(false);
+  
   const navigate = useNavigate();
 
   useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        console.log(uid);
+      } else {
+        console.log('user login nahi ha');
+        navigate("login");
+      }
+    });
 
-    if (!userLoggedIn) {
-      navigate("login");
-    }
+    
   }, []);
 
-  return <>{ component}</>;
+  return <>{component}</>;
 };
 
 export default ProtectedRoutes;

@@ -55,9 +55,9 @@ function QuizApp() {
     }
 
     const nextQuestionIndex = currentQuestionIndex + 1;
-    if (nextQuestionIndex >= quizData.length - 1) {
+    if (nextQuestionIndex >= quizData.length - 0) {
       setIsQuizComplete(true);
-      alert(`Quiz Complete. Your score is ${correctAnswers}/9`);
+      alert(`Quiz Complete. Your score is ${correctAnswers}/10`);
       setQuizData(shuffleArray(quizData));
     } else {
       setCurrentQuestionIndex(nextQuestionIndex);
@@ -74,7 +74,7 @@ function QuizApp() {
   return (
     <>
       {quizData.length > 0 ? (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="min-h-screen mr-3 ml-3 bg-gray-100 flex items-center justify-center">
           {!isQuizComplete ? (
             <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-2xl">
               <h1 className="text-3xl font-bold text-center text-blue-600 mb-4">Quiz App</h1>
@@ -112,13 +112,13 @@ function QuizApp() {
               </button>
             </div>
           ) : (
-            <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-xl text-center">
+            <div className="bg-white ml-3 mr-3 shadow-lg rounded-lg p-8 w-full max-w-xl text-center">
               <h1 className="text-4xl font-bold text-green-600 mb-6">Quiz Complete</h1>
-              <h3 className="text-2xl font-semibold">{`Final Score: ${correctAnswers}/9`}</h3>
+              <h3 className="text-2xl font-semibold">{`Final Score: ${correctAnswers}/10`}</h3>
               <div className="mt-4">
                 <h3 className="text-xl font-medium">{`Correct Answers: ${correctAnswers}`}</h3>
                 <h3 className="text-xl font-medium">{`Wrong Answers: ${incorrectAnswers}`}</h3>
-                <h1 className="text-2xl font-bold mt-4">Total: 9</h1>
+                <h1 className="text-2xl font-bold mt-4">Total: 10</h1>
                 <button
                   className="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
                   onClick={() => window.location.reload()}
