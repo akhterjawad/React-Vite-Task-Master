@@ -5,10 +5,10 @@ const ThemeSwitcher = () => {
 
     const handleThemeChange = () => {
         setIsChecked(!isChecked);
-        if (!isChecked) {
-            document.documentElement.setAttribute('data-theme', 'dark'); // Change theme
+        if (isChecked) {
+            document.documentElement.classList.add('dark'); // Enable dark mode
         } else {
-            document.documentElement.setAttribute('data-theme', 'light'); // Revert to light theme
+            document.documentElement.classList.remove('dark'); // Disable dark mode
         }
     };
 
