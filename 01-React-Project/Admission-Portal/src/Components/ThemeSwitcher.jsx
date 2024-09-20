@@ -6,9 +6,9 @@ const ThemeSwitcher = () => {
     const handleThemeChange = () => {
         setIsChecked(!isChecked);
         if (isChecked) {
-            document.documentElement.classList.add('dark'); // Enable dark mode
-        } else {
             document.documentElement.classList.remove('dark'); // Disable dark mode
+        } else {
+            document.documentElement.classList.add('dark'); // Enable dark mode
         }
     };
 
