@@ -22,7 +22,7 @@
             <a href="https://single-page-web-site.netlify.app/">Single-Page-Web-with-React + Vite + JS</a><span> "Discover a seamless browsing experience with our elegant single-page web app, crafted with React, HTML5, CSS3, and TailwindCSS. Enjoy a modern, responsive design that ensures smooth performance and effortless navigation, all while delivering a visually appealing and user-friendly interface."</span>
         </li><br />
         <li>
-            <a href="https://mj-store-ultra.netlify.app/">MJ-Store UI with-React + Vite + JS</a><span> "A sleek and responsive e-commerce app UI built with React, Vite, TailwindCSS, and Flowbite for an engaging shopping experience."</span>
+            <a href="https://admission-portal-react.netlify.app/">Admission-Portal-with-React + Vite + JS</a><span> "Experience a seamless admission process with our sleek portal, built using React, TailwindCSS, Flowbite, DaisyUI, and React Hook Form for effortless validation, ensuring a responsive, modern, and user-friendly design."</span>
         </li><br />
         <li>
             <a href="https://contact-app-ui.netlify.app/">Contact-App-UI with-React + Vite + JS</a><span> "A clean and responsive contact app UI designed with React, Vite, daisyUI, TailwindCSS, and MaterialUI for seamless user interactions."</span>

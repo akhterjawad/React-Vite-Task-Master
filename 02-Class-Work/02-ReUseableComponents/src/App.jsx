@@ -12,7 +12,7 @@ import './index.css'
 function App() {
   function handleClick(data) {
     console.log(data);
-    
+
   }
 
   return (
@@ -34,7 +34,7 @@ function App() {
 
       </div>
       <h1>footer</h1>
-      <Footer  handleClick={handleClick} title="vip" description='VIP in karachi' price='12300' />
+      <Footer handleClick={handleClick} title="vip" description='VIP in karachi' price='12300' />
     </>
   )
 }

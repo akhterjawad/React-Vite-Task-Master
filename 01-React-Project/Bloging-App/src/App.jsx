@@ -70,3 +70,11 @@ const App = () => {
 }
 
 export default App
+
+
+
+Attended an outstanding workshop today at Saylani Mass IT Training Program led by the brilliant Muhammad Haroon. He truly expanded my perspective with fresh concepts and ideas I hadn’t explored before. 🙌
+
+Also had the opportunity to explore Zaitoon Ashraf IT Park, a newly developed tech hub by Saylani. It’s genuinely a cutting-edge facility that will foster incredible innovation!
+
+ hashtag#Gratitude hashtag#LearningJourney hashtag#Mentorship hashtag#ContinuousImprovement hashtag#SaylaniTechLimited hashtag#SaylaniMassITTraining hashtag#ZaitoonAshrafITPark hashtag#Networking hashtag#Innovation hashtag#Saylani hashtag#LearningNeverStops hashtag#FrontendDeveloper

@@ -1,8 +1,5 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul><li>
+            <a href="https://admission-portal-react.netlify.app/">Admission-Portal-with-React + Vite + JS</a><span> "Experience a seamless admission process with our sleek portal, built using React, TailwindCSS, Flowbite, DaisyUI, and React Hook Form for effortless validation, ensuring a responsive, modern, and user-friendly design."</span>
+        </li></ul>
