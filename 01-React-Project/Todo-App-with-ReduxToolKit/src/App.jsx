@@ -1,50 +1,62 @@
-import React, { useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { addTodo, removeTodo, UpdateTodo } from './Config/Redux/Reducers/todoSlice'
+import React, { useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTodo, removeTodo, EditTodo } from './Config/Redux/Reducers/todoSlice';
 
-const App = () => {
+let App = () => {
+  let todoVal = useRef(); // `useRef` for the input field reference
 
-  const todoVal = useRef()
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state.todos.todo);
 
-  // dispatch
-  const dispatch = useDispatch()
-
-  //selector
-  const selector = useSelector(state => state.todos.todo);
-  console.log(selector);
-
-  const addTodoInRedux = (event) => {
-    event.preventDefault()
-    if (todoVal.current.value =='') {
-      alert('please enter something')
-      return
+  // Effect to synchronize localStorage with Redux state
+  useEffect(() => {
+    if (selector.length > 0) {
+      localStorage.setItem('SendData', JSON.stringify(selector));
     }
-    console.log("todo added", todoVal.current.value)
-    dispatch(addTodo({
-      title: todoVal.current.value
-    }))
-    todoVal.current.value = "" // Clear input after adding
-  }
+  }, [selector]);
 
+  // Add new todo
+  const addTodoInRedux = (event) => {
+    event.preventDefault();
+
+    if (todoVal.current.value === '') {
+      alert('please enter something');
+      return;
+    }
+
+    dispatch(
+      addTodo({
+        title: todoVal.current.value,
+      })
+    );
+
+    todoVal.current.value = ''; // Clear input after adding
+  };
+
+  // Delete a todo
   const deleteItemFromRedux = (index) => {
-    console.log("delete item", index);
-    dispatch(removeTodo({
-      index
-    }))
-  }
+    dispatch(
+      removeTodo({
+        index,
+      })
+    );
+  };
 
-  const updateItemFromRedux = (index) => {
-    console.log("update item", index);
-    dispatch(UpdateTodo({
-      index
-    }))
-  }
+  // Edit a todo
+  const editItemFromRedux = (index) => {
+    dispatch(
+      EditTodo({
+        index,
+      })
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
       <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
         <h1 className="text-2xl font-bold mb-6 text-center text-blue-500">Todo List</h1>
 
+        {/* Form to add new todos */}
         <form className="flex items-center space-x-4 mb-6" onSubmit={addTodoInRedux}>
           <input
             type="text"
@@ -60,6 +72,7 @@ const App = () => {
           </button>
         </form>
 
+        {/* Todo List Display */}
         <ul className="space-y-4">
           {selector.length > 0 ? (
             selector.map((item, index) => (
@@ -76,7 +89,7 @@ const App = () => {
                     Delete
                   </button>
                   <button
-                    onClick={() => updateItemFromRedux(index)}
+                    onClick={() => editItemFromRedux(index)}
                     className="px-3 py-1 bg-yellow-500 text-white text-sm rounded-lg hover:bg-yellow-600 transition duration-300"
                   >
                     Edit
@@ -90,7 +103,7 @@ const App = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
