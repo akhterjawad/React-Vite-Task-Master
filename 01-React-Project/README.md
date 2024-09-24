@@ -14,8 +14,16 @@
         </li><br />
         <li>
             <a href="https://weather-app-ultra.netlify.app/">Weather-App-with-React + Vite + JS</a><span> "Experience real-time weather updates with this sleek, responsive app built using React, HTML5, CSS3, and TailwindCSS for seamless performance and modern design."</span>
-        </li><br />
+        </li>
+        <br />
         <li>
+            <a href="https://todo-app-with-redux-main.netlify.app/">Todo-App-with-Redux-Toolkit-&-React + Vite + JS</a><span> "Stay organized with this sleek, responsive Todo app built using React, Redux Toolkit, and LocalStorage for efficient state management and seamless task tracking."</span>
+        </li>
+        <br />
+        <li>
+            <a href="https://mj-store-ultra.netlify.app/">MJ-Store UI with-React + Vite + JS</a><span> "A sleek and responsive e-commerce app UI built with React, Vite, TailwindCSS, and Flowbite for an engaging shopping experience."</span>
+        </li>
+        <br /><li>
             <a href="https://quiz-app-ultra.netlify.app/">Quiz-App-with-React + Vite + JS</a><span> "Engage in real-time quizzes with this sleek, responsive app built using React, HTML5, CSS3, and TailwindCSS for a smooth, interactive experience and modern design."</span>
         </li><br />
         <li>
