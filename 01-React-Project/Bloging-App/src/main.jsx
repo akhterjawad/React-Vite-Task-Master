@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout.jsx';
 import Login from './Pages/Login.jsx';
@@ -30,15 +30,15 @@ const router = createBrowserRouter([
       },
       {
         path: 'profile',
-        element: <ProtectedRoutes component={<Profile/>}/>
+        element: <ProtectedRoutes component={<Profile />} />
       },
       {
         path: 'dashboard',
-        element: <ProtectedRoutes component={<Dashboard/>}/>
+        element: <ProtectedRoutes component={<Dashboard />} />
       },
       {
         path: 'user',
-        element: <ProtectedRoutes component={<SingleUser/>}/>
+        element: <ProtectedRoutes component={<SingleUser />} />
       },
     ]
   }
