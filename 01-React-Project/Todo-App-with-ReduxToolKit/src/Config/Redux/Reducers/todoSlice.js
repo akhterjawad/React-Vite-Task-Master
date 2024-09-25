@@ -36,6 +36,8 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 // Retrieve todos from localStorage if available
 const savedTodos = JSON.parse(localStorage.getItem('SendData')) || [];
 
+console.log(savedTodos);
+
 export const todoSlice = createSlice({
     name: 'Todos',
     initialState: {

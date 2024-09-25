@@ -10,13 +10,12 @@ let App = () => {
 
   // Effect to synchronize localStorage with Redux state
   useEffect(() => {
-    if (selector.length > 0) {
-      localStorage.setItem('SendData', JSON.stringify(selector));
-    }
+    console.log('useEffect');
+    localStorage.setItem('SendData', JSON.stringify(selector));
   }, [selector]);
 
   // Add new todo
-  const addTodoInRedux = (event) => {
+  function addTodoInRedux(event) {
     event.preventDefault();
 
     if (todoVal.current.value === '') {
@@ -34,7 +33,7 @@ let App = () => {
   };
 
   // Delete a todo
-  const deleteItemFromRedux = (index) => {
+  function deleteItemFromRedux(index) {
     dispatch(
       removeTodo({
         index,
@@ -43,7 +42,7 @@ let App = () => {
   };
 
   // Edit a todo
-  const editItemFromRedux = (index) => {
+  function editItemFromRedux(index) {
     dispatch(
       EditTodo({
         index,
