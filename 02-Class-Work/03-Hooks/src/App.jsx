@@ -118,26 +118,26 @@ import { useState, useRef, useEffect } from 'react'
 
 // counter app
 
-// const App = () => {
+const App = () => {
 
-//   const [countAdd, setCountAdd] = useState(0);
-//   const [countLess, setCountLess] = useState(0)
+  const [countAdd, setCountAdd] = useState(0);
+  const [countLess, setCountLess] = useState(0)
 
-// // useEffect function 
+// useEffect function 
 
-//   useEffect(() => { 
-//     console.log(`useEffect run`);
-//   },[countAdd]); // Dependency array
+  useEffect(() => { 
+    console.log(`useEffect with countAdd run`);
+  },[countAdd]); // Dependency array
 
-//   return (
-//     <>
-//       <p>countAdd: {countAdd}</p>
-//       <p>countLess: {countLess}</p>
-//       <button onClick={() => setCountAdd(countAdd + 1)}>Increase</button>
-//       <button onClick={() => setCountLess(countLess - 1)}>Decrease</button>
-//     </>
-//   )
-// }
+  return (
+    <>
+      <p>countAdd: {countAdd}</p>
+      <p>countLess: {countLess}</p>
+      <button onClick={() => setCountAdd(countAdd + 1)}>Increase</button>
+      <button onClick={() => setCountLess(countLess - 1)}>Decrease</button>
+    </>
+  )
+}
 
 
 // export default App
@@ -158,8 +158,8 @@ import { useState, useRef, useEffect } from 'react'
 // Example: Socho tumhe component ke render hone ke baad kisi API se data fetch karna hai.
 
 
-function App() {
-  const [data, setData] = useState(null);
+// function App() {
+  // const [data, setData] = useState(null);
 
   // useEffect(() => {
   //   async function getData() {
@@ -171,42 +171,42 @@ function App() {
   //   getData()
   // }, [])
 
-  let [array, setArray] = useState([]);
+//   let [array, setArray] = useState([]);
 
-  useEffect(() => {
-    async function getData() {
-      const res = await fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(json => {
-          console.log(json);
-          setArray([...json]);
-        });
-    }
-    getData();
-  }, []);
+//   useEffect(() => {
+//     async function getData() {
+//       const res = await fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(response => response.json())
+//         .then(json => {
+//           console.log(json);
+//           setArray([...json]);
+//         });
+//     }
+//     getData();
+//   }, []);
 
-  return (
-    <>
-      <h1>Hello world!</h1>
-      {/* {array.length > 0 ? (
-        array.map((item) => {
-          return (
-            <div key={item.id}>
-              <p>{item.name}</p>
-            </div>
-          );
-        })
-      ) : (
-        <h1>Loading...</h1>
-      )} */}
-      {array.length ? array.map((item) => {
-        return <div key={item.id}>
-          <p>{item.name}</p>
-        </div>
-      }) : <h1>Loading...</h1>}
-    </>
-  );
-}
+//   return (
+//     <>
+//       <h1>Hello world!</h1>
+//       {/* {array.length > 0 ? (
+//         array.map((item) => {
+//           return (
+//             <div key={item.id}>
+//               <p>{item.name}</p>
+//             </div>
+//           );
+//         })
+//       ) : (
+//         <h1>Loading...</h1>
+//       )} */}
+//       {array.length ? array.map((item) => {
+//         return <div key={item.id}>
+//           <p>{item.name}</p>
+//         </div>
+//       }) : <h1>Loading...</h1>}
+//     </>
+//   );
+// }
 
 
 

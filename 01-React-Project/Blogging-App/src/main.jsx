@@ -10,6 +10,7 @@ import Profile from './pages/profile.jsx';
 import Register from './pages/Register.jsx';
 import Home from './pages/Home.jsx';
 import ProtectedRoutes from './components/ProtectedRoutes.jsx';
+import './index.css'
 
 const router = createBrowserRouter([
   {

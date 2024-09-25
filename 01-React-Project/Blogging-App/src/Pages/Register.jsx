@@ -32,8 +32,15 @@ const Register = () => {
 
   }
   return (
-    <div>
-      <h1>Register</h1>
+    <>
+{/* <div className=' bg-slate-950'><h1>Signup</h1></div>
+<h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1> */}
+     <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+    <h1>register</h1>
       <form onSubmit={loginUserFromFirebase}>
         <input type="text" placeholder='enter your full name' ref={fullName} /> <br /> <br />
         <input type="email" placeholder='enter your email' ref={email} /><br /> <br />
@@ -41,7 +48,7 @@ const Register = () => {
         <input type="file" placeholder='enter your profile picture' ref={profileImage} /><br /> <br />
         <button type='submit'>register</button>
       </form>
-    </div>
+    </>
   )
 }
 
