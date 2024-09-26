@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 import { signUpUser, uploadImage } from '../config/firebase/FirebaseMethod'
 import { useNavigate } from 'react-router-dom'
+import Navbar from '../Components/Navbar'
+import NavbarBlow from '../Components/NavbarBlow'
 
 const Register = () => {
   let navigate = useNavigate()
@@ -40,6 +42,8 @@ const Register = () => {
 <h1 className="text-3xl font-bold underline">
       Hello world!
     </h1> */}
+    <Navbar Login='Login'/>
+    <NavbarBlow PageName='Register'/>
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
           <h1 className="text-3xl font-bold text-center underline mb-6">Register</h1>
