@@ -1,7 +1,9 @@
 import React, { useRef } from 'react'
 import { signUpUser, uploadImage } from '../config/firebase/FirebaseMethod'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+  let navigate = useNavigate()
   const fullName = useRef()
   const email = useRef()
   const password = useRef()
@@ -24,6 +26,7 @@ const Register = () => {
         profileImage: userProfileImageUrl
       })
       console.log(userData);
+      navigate('/login')
 
     } catch (error) {
       console.error(error);
@@ -33,21 +36,60 @@ const Register = () => {
   }
   return (
     <>
-{/* <div className=' bg-slate-950'><h1>Signup</h1></div>
+      {/* <div className=' bg-slate-950'><h1>Signup</h1></div>
 <h1 className="text-3xl font-bold underline">
       Hello world!
     </h1> */}
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <h1>register</h1>
-      <form onSubmit={loginUserFromFirebase}>
-        <input type="text" placeholder='enter your full name' ref={fullName} /> <br /> <br />
-        <input type="email" placeholder='enter your email' ref={email} /><br /> <br />
-        <input type="password" placeholder='enter your password' ref={password} /><br /> <br />
-        <input type="file" placeholder='enter your profile picture' ref={profileImage} /><br /> <br />
-        <button type='submit'>register</button>
-      </form>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+          <h1 className="text-3xl font-bold text-center underline mb-6">Register</h1>
+
+          <form onSubmit={loginUserFromFirebase}>
+            <div className="mb-4">
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                ref={fullName}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+
+            <div className="mb-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                ref={email}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+
+            <div className="mb-4">
+              <input
+                type="password"
+                placeholder="Enter your password"
+                ref={password}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+
+            <div className="mb-6">
+              <input
+                type="file"
+                ref={profileImage}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+
     </>
   )
 }

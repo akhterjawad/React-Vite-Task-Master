@@ -1,11 +1,14 @@
 import React from 'react'
 import Login from './Login'
 import Register from './Register'
+import NavbarBlow from '../Components/NavbarBlow.jsx'
 
 const Home = () => {
   return (
     <>
-    <Register/>
+    
+    <NavbarBlow PageName='Good Morning Readers!'/>
+    <h1>home</h1>
     </>
   )
 }

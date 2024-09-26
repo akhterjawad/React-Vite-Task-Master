@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '',
+        path: '/',
         element: <Home />
       },
       {
@@ -31,15 +31,15 @@ const router = createBrowserRouter([
       },
       {
         path: 'profile',
-        element: <ProtectedRoutes component={<Profile />} />
+        element:<Profile />
       },
       {
         path: 'dashboard',
-        element: <ProtectedRoutes component={<Dashboard />} />
+        element:<Dashboard />
       },
       {
         path: 'user',
-        element: <ProtectedRoutes component={<SingleUser />} />
+        element: <SingleUser />
       },
     ]
   }

@@ -10,8 +10,10 @@ let App = () => {
 
   // Effect to synchronize localStorage with Redux state
   useEffect(() => {
-    console.log('useEffect');
-    localStorage.setItem('SendData', JSON.stringify(selector));
+    if (selector.length > 0) {
+      localStorage.setItem('SendData', JSON.stringify(selector));
+    }
+    // console.log('useEffect');
   }, [selector]);
 
   // Add new todo

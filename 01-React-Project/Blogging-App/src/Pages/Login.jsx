@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import { useForm } from "react-hook-form"
 import { loginUser } from '../config/firebase/FirebaseMethod'
 import { useNavigate } from 'react-router-dom'
+import NavbarBlow from '../Components/NavbarBlow'
 
 const Login = () => {
   const {
@@ -22,25 +23,46 @@ const Login = () => {
         password: data.password
       })
       console.log(userLogin)
-      navigate('')
+      navigate('/')
 
     } catch (error) {
-      console.error(error)
+      console.log(error)
     }
   }
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit(loginUserFromFirebase)}>
-        <input type="email" placeholder='enter your email' {...register("email", { required: true })} /><br />
-        {errors.email && <span className='text-danger'>This field is required</span>}
-        <br />
-        <input type="password" placeholder='enter your password' {...register("password", { required: true })} /><br />
-        {errors.password && <span className='text-danger'>This field is required</span>}
-        <br />
-        <button type='submit'>login</button>
+    <>
+    <NavbarBlow PageName='Login'/>
+      <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
+      <form onSubmit={handleSubmit(loginUserFromFirebase)} className="max-w-md mx-auto bg-white shadow-lg rounded-lg p-8">
+        <div className="mb-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            {...register("email", { required: true })}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.email && <span className="text-red-500 text-sm mt-1 block">This field is required</span>}
+        </div>
+
+        <div className="mb-6">
+          <input
+            type="password"
+            placeholder="Enter your password"
+            {...register("password", { required: true })}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.password && <span className="text-red-500 text-sm mt-1 block">This field is required</span>}
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+        >
+          Login
+        </button>
       </form>
-    </div>
+
+    </>
   )
 }
 
