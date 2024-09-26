@@ -24,6 +24,7 @@ const Login = () => {
       console.log(userLogin);
       navigate('/');
     } catch (error) {
+      alert(error)
       console.log(error);
     }
   };
