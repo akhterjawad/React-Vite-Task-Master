@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { signUpUser, uploadImage } from '../config/firebase/FirebaseMethod';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +6,7 @@ import Navbar from '../Components/Navbar';
 import NavbarBlow from '../Components/NavbarBlow';
 
 const Register = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false); // Start with false
   const {
     register,
     handleSubmit,
@@ -13,7 +14,8 @@ const Register = () => {
   } = useForm();
   const navigate = useNavigate();
 
-  const loginUserFromFirebase = async (data) => {
+  const registerUserFromFirebase = async (data) => {
+    setIsSubmitting(true); // Set to true when starting submission
     console.log(data);
 
     try {
@@ -30,6 +32,7 @@ const Register = () => {
       alert(error);
       console.log(error);
     }
+    setIsSubmitting(false); // Reset to false after submission completes
   };
 
   return (
@@ -40,7 +43,7 @@ const Register = () => {
         <div className="ml-3 mr-3 max-w-md w-full bg-white rounded-lg shadow-md p-8">
           <h1 className="sm:text-3xl text-2xl font-bold text-center underline mb-6">Register</h1>
 
-          <form onSubmit={handleSubmit(loginUserFromFirebase)}>
+          <form onSubmit={handleSubmit(registerUserFromFirebase)}>
             <div className="mb-4">
               <input
                 type="text"
@@ -75,17 +78,45 @@ const Register = () => {
               <input
                 type="file"
                 {...register("profileImage", { required: true })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input"
               />
               {errors.profileImage && <span className="text-red-500 text-sm mt-1">This field is required</span>}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+              disabled={isSubmitting}
+              className={`flex items-center justify-center w-full py-2 rounded-lg transition duration-300 ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 text-white hover:bg-blue-600'
+                }`}
             >
-              Register
+              {isSubmitting ? (
+                <svg
+                  className="animate-spin h-5 w-5 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12c0-1.5.4-2.9 1.1-4.1l1.5 1.5C6.9 10.3 6 11.1 6 12s.9 1.7 2.6 2.6l-1.5 1.5C4.4 14.9 4 13.5 4 12zm16 0c0 1.5-.4 2.9-1.1 4.1l-1.5-1.5C17.1 13.7 18 12.9 18 12s-.9-1.7-2.6-2.6l1.5-1.5C19.6 9.1 20 10.5 20 12z"
+                  ></path>
+                </svg>
+              ) : (
+                'Register'
+              )}
+              {isSubmitting && <span className="ml-2">Registering...</span>}
             </button>
+
+
           </form>
         </div>
       </div>
