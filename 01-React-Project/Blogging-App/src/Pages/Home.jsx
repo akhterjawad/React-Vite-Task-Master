@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setCheckUser(user)
+        // setCheckUser(user)
         console.log(user);
 
         setCheckUser(true)
@@ -27,9 +27,9 @@ const Home = () => {
     <>
 
       <Navbar
-        Dashboard={CheckUser ? 'Dashboard' : ''}
-        Profile={CheckUser ? 'Profile' : ''}
-        Logout={CheckUser ? 'Logout' : ''}
+        // Dashboard={CheckUser ? 'Dashboard' : ''}
+        // Profile={CheckUser ? 'Profile' : ''}
+        // Logout={CheckUser ? 'Logout' : ''}
         Login={!CheckUser ? 'Login' : ''}
       />
 

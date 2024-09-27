@@ -3,6 +3,7 @@ import NavbarBlow from '../Components/NavbarBlow'
 import { useNavigate } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../config/firebase/FirebaseMethod'
+import Navbar from '../Components/Navbar'
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -23,6 +24,7 @@ const Dashboard = () => {
 
   return (
     <>
+    <Navbar/>
     <NavbarBlow PageName='Dashboard'/>
       Dashboard
     </>
