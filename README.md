@@ -24,7 +24,7 @@
             <a href="https://mj-store-ultra.netlify.app/">MJ-Store UI with-React + Vite + JS</a><span> "A sleek and responsive e-commerce app UI built with React, Vite, TailwindCSS, and Flowbite for an engaging shopping experience."</span>
         </li>
         <br /><li>
-            <a href="https://quiz-app-ultra.netlify.app/">Quiz-App-with-React + Vite + JS</a><span> "Engage in real-time quizzes with this sleek, responsive app built using React, HTML5, CSS3, and TailwindCSS for a smooth, interactive experience and modern design."</span>
+            <a href="https://quiz-app-with-reactjs.netlify.app/">Quiz-App-with-React + Vite + JS</a><span> "Engage in real-time quizzes with this sleek, responsive app built using React, HTML5, CSS3, and TailwindCSS for a smooth, interactive experience and modern design."</span>
         </li><br />
         <li>
             <a href="https://single-page-web-site.netlify.app/">Single-Page-Web-with-React + Vite + JS</a><span> "Discover a seamless browsing experience with our elegant single-page web app, crafted with React, HTML5, CSS3, and TailwindCSS. Enjoy a modern, responsive design that ensures smooth performance and effortless navigation, all while delivering a visually appealing and user-friendly interface."</span>

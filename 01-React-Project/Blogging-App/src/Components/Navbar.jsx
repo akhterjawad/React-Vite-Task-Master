@@ -60,7 +60,7 @@ let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
     <>
 
       <nav className="bg-[#7749F8] sm:p-0 p-1 flex flex-wrap justify-between items-center">
-        <Link to="/" className="text-white sm:ml-24 ml-5 sm:text-[1.4rem] text-[1.3rem] font-bold hover:bg-[#5628F6]  rounded-lg transition duration-300 sm:px-2 px-0 py-0  sm:py-1">Personal Blogging App</Link>
+        <Link to="/" className="text-white sm:ml-24 ml-5 sm:text-[1.4rem] text-[1.1rem] font-bold hover:bg-[#5628F6]  rounded-lg transition duration-300 sm:px-2 px-0 py-0  sm:py-1">Personal Blogging App</Link>
         <div className="flex justify-center items-center font-semibold sm:mr-12 mr-5 ">
           {LoginUser ?
             <div className="bg-white border-gray-200 dark:bg-gray-900">
@@ -75,7 +75,7 @@ let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
                   >
                     <span className="sr-only">Open user menu</span>
                     <img
-                      className="w-8 h-8 rounded-full"
+                      className=" w-8 h-8 rounded-full object-cover"
                       src={UserImage}
                       alt="user photo"
                     />
@@ -116,20 +116,6 @@ let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
               </div>
             </div>
             : ''}
-
-          {/* <Link to="/" className="text-white sm:px-2 px-0 py-0  sm:py-1  sm:hover:bg-[#5628F6] rounded-lg transition duration-300">{Home}</Link> */}
-
-          {/* <Link to="/dashboard" className="text-white sm:px-2 px-0 py-0  sm:py- 1sm: hover:bg-[#5628F6] rounded-lg transition duration-300">{Dashboard}</Link>
-
-          <Link to="/profile" className="text-white sm:px-2 px-0 py-0  sm:p ysm:-1 hover:bg-[#5628F6] rounded-lg transition duration-300">{Profile}</Link>
-
-          <h5
-            className="text-white sm:px-2 px-0 py-0  sm:py-1 hover:bg-[#5628F6] rounded-lg cursor-pointer transition duration-300"
-            onClick={logoutUser}
-          >
-            {Logout}
-          </h5>*/}
-
           <Link to="/login" className="text-white sm:px-2 px-0 py-0  sm:py-1 hover:bg-[#5628F6]  rounded-lg transition duration-300">{Login}</Link>
 
           <Link to="/register" className="text-white sm:px-2 px-0 py-0  sm:py-1 hover:bg-[#5628F6]  rounded-lg transition duration-300">{Register}</Link>

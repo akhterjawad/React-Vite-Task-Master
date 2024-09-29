@@ -120,7 +120,7 @@ const Login = () => {
 
 
 
-      <div className="flex items-center justify-center h-[78vh] bg-gray-100">
+      <div className="flex items-center justify-center h-[78vh] bg-gray-50">
         <div className="w-full max-w-sm p-6 m-3 bg-white shadow-lg rounded-lg">
           <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
 

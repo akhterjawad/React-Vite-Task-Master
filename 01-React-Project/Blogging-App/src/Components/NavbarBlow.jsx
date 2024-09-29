@@ -4,7 +4,7 @@ const NavbarBlow = ({ PageName }) => {
     return (
         <>
             <div className='border '>
-                <h1 className='sm:ml-24 m-6 ml-10 font-bold text-[1.5rem] sm:text-[2rem]'>{PageName}</h1>
+                <h1 className='sm:ml-24 m-6 ml-10 font-bold text-[1.7rem] sm:text-[2.3rem]'>{PageName}</h1>
             </div>
         </>
     )
