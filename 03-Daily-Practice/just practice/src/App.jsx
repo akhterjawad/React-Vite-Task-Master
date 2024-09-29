@@ -273,59 +273,76 @@
 //     )
 // }
 
-// export default App
-import React, { useState, useEffect } from 'react';
+// // export default App
+// import React, { useState, useEffect } from 'react';
+
+// const App = () => {
+//   const [age, setAge] = useState(1);
+
+//   useEffect(() => {
+//     if (age < 1) {
+//       alert('age is not down blow');
+//       setAge(1); // Is se age ko update kar ke re-render kar diya jaye ga bina alert ke bar bar run hone ke
+//     }
+//   }, [age]);
+
+//   return (
+//     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+//       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md mx-auto text-center space-y-6">
+//         <h1 className="text-3xl font-bold text-blue-500">Gym Admission</h1>
+
+//         <div className="space-y-4">
+//           <h2 className="text-xl text-gray-700">
+//             Age of guy: <span className="font-semibold text-blue-600">{age}</span>
+//           </h2>
+
+//           <div className="space-x-4">
+//             <button
+//               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all"
+//               onClick={() => setAge(age + 1)}
+//             >
+//               Add Age
+//             </button>
+//             <button
+//               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-all"
+//               onClick={() => setAge(age - 1)}
+//             >
+//               Subtract Age
+//             </button>
+//           </div>
+
+//           <div className="mt-6">
+//             {age < 15 ? (
+//               <p className="text-red-500 font-medium">You're still a kid, dear. 😅</p>
+//             ) : age >= 18 ? (
+//               <p className="text-green-500 font-medium">Hey brother, where have you been? Join immediately! 💪</p>
+//             ) : (
+//               <p className="text-yellow-500 font-medium">
+//                 You can join, but you have to pay 1000 extra. 🤑
+//               </p>
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+import React from 'react'
+import { useState } from 'react'
 
 const App = () => {
-  const [age, setAge] = useState(1);
-
-  useEffect(() => {
-    if (age < 1) {
-      alert('age is not down blow');
-      setAge(1); // Is se age ko update kar ke re-render kar diya jaye ga bina alert ke bar bar run hone ke
-    }
-  }, [age]);
-
+  let [num,setnum]=useState(null)
+  function rander() {
+    setnum(34)
+  }
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md mx-auto text-center space-y-6">
-        <h1 className="text-3xl font-bold text-blue-500">Gym Admission</h1>
+    <>
+      <button onClick={rander}>show</button>
+      <div>{num}</div>
+    </>
+  )
+}
 
-        <div className="space-y-4">
-          <h2 className="text-xl text-gray-700">
-            Age of guy: <span className="font-semibold text-blue-600">{age}</span>
-          </h2>
-
-          <div className="space-x-4">
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all"
-              onClick={() => setAge(age + 1)}
-            >
-              Add Age
-            </button>
-            <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-all"
-              onClick={() => setAge(age - 1)}
-            >
-              Subtract Age
-            </button>
-          </div>
-
-          <div className="mt-6">
-            {age < 15 ? (
-              <p className="text-red-500 font-medium">You're still a kid, dear. 😅</p>
-            ) : age >= 18 ? (
-              <p className="text-green-500 font-medium">Hey brother, where have you been? Join immediately! 💪</p>
-            ) : (
-              <p className="text-yellow-500 font-medium">
-                You can join, but you have to pay 1000 extra. 🤑
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default App;
+export default App

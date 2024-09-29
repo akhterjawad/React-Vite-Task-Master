@@ -6,6 +6,7 @@ import { collection, getDocs } from 'firebase/firestore'
 
 let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
   let [UserImage, setUserImage] = useState(null)
+  // let [Uid, setUid] = useState(null)
   let [UserFullName, setUserFullName] = useState(null)
   let [UserEmail, setUserEmail] = useState(null)
   let [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -16,40 +17,36 @@ let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
   };
   let navigate = useNavigate()
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        console.log(user);
-        setLoginUser(true)
-        // setUid(user.uid)
-        // return
-      } else {
-        setLoginUser(false)
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      console.log(user);
+      setLoginUser(true);
+      // setUid(user.uid);
 
-      }
-      function GetUserDataFromFirestore() {
-        // let GetDataFromFirebase = await getData("users", uid)
-        // console.log(GetDataFromFirebase);
-
-        getDocs(collection(db, "users"))
-          .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-              console.log(doc.data());
-
-              //       if (doc.data().id === uid) {
-              console.log(doc.data().profileImage);
+      // Uid set hone ka wait karte hain aur phir data fetch karte hain
+      let GetDataFromFirebase = async () => {
+        try {
+          const querySnapshot = await getDocs(collection(db, "users"));
+          querySnapshot.forEach((doc) => {
+            if (doc.data().id === user.uid) { // yahan user.uid use kiya hai
+              console.log('login');
               setUserImage(doc.data().profileImage);
-              setUserFullName(doc.data().fullName)
-              setUserEmail(doc.data().email)
-              //       }
-            });
-          })
-          .catch((error) => {
-            console.log("Error getting documents: ", error);
+              setUserFullName(doc.data().fullName);
+              setUserEmail(doc.data().email);
+            }
           });
-      }
-      GetUserDataFromFirestore()
-    })
-  }, [])
+        } catch (error) {
+          console.log("Error getting documents: ", error);
+        }
+      };
+
+      GetDataFromFirebase(); // Ab function call karte hain
+    } else {
+      setLoginUser(false);
+    }
+  });
+}, []);
+
   let logoutUser = async () => {
     let user = await signOutUser();
     // setIsUser(false)
@@ -99,7 +96,7 @@ let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
                           <Link to="/dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">{Dashboard}Dashboard</Link>
                         </li>
                         <li>
-                          <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">{Profile}Profile</Link>
+                          <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">{Profile}Your Profile</Link>
                         </li>
                         <li>
                           <h5
