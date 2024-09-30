@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth, db, getData, signOutUser } from '../config/firebase/FirebaseMethod'
 import { onAuthStateChanged } from 'firebase/auth'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 
 let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
   let [UserImage, setUserImage] = useState(null)
@@ -24,23 +24,27 @@ let Navbar = ({ Home, Dashboard, Profile, Logout, Login, Register }) => {
       // setUid(user.uid);
 
       // Uid set hone ka wait karte hain aur phir data fetch karte hain
-      let GetDataFromFirebase = async () => {
+      let GetUserDataFromFirebase = async () => {
         try {
-          const querySnapshot = await getDocs(collection(db, "users"));
+          // Create a query to find the user document where id matches user.uid
+          const userQuery = query(
+            collection(db, "users"),
+            where("id", "==", user.uid)
+          );
+          const querySnapshot = await getDocs(userQuery);
+
           querySnapshot.forEach((doc) => {
-            if (doc.data().id === user.uid) { // yahan user.uid use kiya hai
-              console.log('login');
-              setUserImage(doc.data().profileImage);
-              setUserFullName(doc.data().fullName);
-              setUserEmail(doc.data().email);
-            }
+            console.log('User data found:', doc.data());
+            setUserImage(doc.data().profileImage);
+            setUserFullName(doc.data().fullName);
+            setUserEmail(doc.data().email);
           });
         } catch (error) {
-          console.log("Error getting documents: ", error);
+          console.log("Error getting user document: ", error);
         }
       };
 
-      GetDataFromFirebase(); // Ab function call karte hain
+      GetUserDataFromFirebase(); // Ab function call karte hain
     } else {
       setLoginUser(false);
     }
