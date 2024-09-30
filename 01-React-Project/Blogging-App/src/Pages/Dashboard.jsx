@@ -322,7 +322,7 @@ const Dashboard = () => {
       <Navbar />
       <NavbarBlow PageName="Dashboard" />
       
-      <div className='flex items-center sm:items-start flex-col justify-start sm:pl-[100px] pl-0 bg-gray-400 min-h-screen'>
+      <div className='flex items-center sm:items-start flex-col justify-start sm:pl-[100px] pl-0 bg-gray-50 min-h-screen'>
         <div className='flex items-center flex-col justify-center gap-5  max-h-96  bg-white w-[95%]  sm:w-[80%] mt-20 rounded-sm'>
           <input
             required

@@ -37,20 +37,21 @@ const Register = () => {
 
   return (
     <>
-    <nav className="bg-[#7749F8] sm:p-0 p-1 flex flex-wrap justify-between items-center">
+      <nav className="bg-[#7749F8] sm:p-0 p-1 flex flex-wrap justify-between items-center">
         <Link to="/" className="text-white sm:ml-24 ml-5 sm:text-[1.4rem] text-[1.3rem] font-bold hover:bg-[#5628F6]  rounded-lg transition duration-300 sm:px-2 px-0 py-0  sm:py-1">Personal Blogging App</Link>
         <div className="flex justify-center items-center font-semibold sm:mr-12 mr-5 ">
           <Link to="/Login" className="text-white sm:px-2 px-0 py-0  sm:py-1 hover:bg-[#5628F6]  rounded-lg transition duration-300">Login</Link>
         </div>
       </nav>
       <NavbarBlow PageName='Register' />
-      <div className="flex items-center justify-center h-[79vh] pt-1 bg-gray-100">
+      <div className="flex items-center justify-center  pt-[3rem] ">
         <div className="ml-3 mr-3 max-w-md w-full bg-white rounded-lg shadow-md p-8">
           <h1 className="sm:text-3xl text-2xl font-bold text-center underline mb-6">Register</h1>
 
           <form onSubmit={handleSubmit(registerUserFromFirebase)}>
             <div className="mb-4">
               <input
+                required
                 type="text"
                 placeholder="Enter your full name"
                 {...register("fullName", { required: true })}
@@ -61,6 +62,7 @@ const Register = () => {
 
             <div className="mb-4">
               <input
+                required
                 type="email"
                 placeholder="Enter your email"
                 {...register("email", { required: true })}
@@ -71,6 +73,7 @@ const Register = () => {
 
             <div className="mb-4">
               <input
+                required
                 type="password"
                 placeholder="Enter your password"
                 {...register("password", { required: true })}
@@ -81,9 +84,11 @@ const Register = () => {
 
             <div className="mb-6">
               <input
+                required
                 type="file"
                 {...register("profileImage", { required: true })}
-                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input"
+                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input
+                required"
               />
               {errors.profileImage && <span className="text-red-500 text-sm mt-1">This field is required</span>}
             </div>
