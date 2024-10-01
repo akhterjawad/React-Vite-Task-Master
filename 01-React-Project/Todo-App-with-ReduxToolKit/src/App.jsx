@@ -3,17 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, removeTodo, EditTodo } from './Config/Redux/Reducers/todoSlice';
 
 let App = () => {
-  let todoVal = useRef(); // `useRef` for the input field reference
+  let todoVal = useRef();
 
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.todos.todo);
 
   // Effect to synchronize localStorage with Redux state
   useEffect(() => {
-    if (selector.length > 0) {
-      localStorage.setItem('SendData', JSON.stringify(selector));
-    }
-    // console.log('useEffect');
+    localStorage.setItem('SendData', JSON.stringify(selector));
+
   }, [selector]);
 
   // Add new todo
@@ -31,7 +29,7 @@ let App = () => {
       })
     );
 
-    todoVal.current.value = ''; // Clear input after adding
+    todoVal.current.value = '';
   };
 
   // Delete a todo

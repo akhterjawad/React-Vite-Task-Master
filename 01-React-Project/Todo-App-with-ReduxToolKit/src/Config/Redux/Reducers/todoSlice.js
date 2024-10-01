@@ -54,7 +54,7 @@ export const todoSlice = createSlice({
             state.todo.splice(action.payload.index, 1); // Remove the todo by index
         },
         EditTodo: (state, action) => {
-            let updatedValue = prompt('Enter updated value');
+            let updatedValue = prompt('Enter updated value', state.todo[action.payload.index].title);
             if (updatedValue !== '') {
                 state.todo[action.payload.index].title = updatedValue; // Update the todo title
             }
