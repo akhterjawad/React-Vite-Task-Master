@@ -10,6 +10,7 @@ const ProtectedRoutes = ({ component }) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
+        // console.log(auth.currentUser.uid);
         console.log(uid);
       } else {
         console.log('user login nahi ha');
