@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
-import { addDoc, collection, getDocs, orderBy, query, Timestamp } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, Timestamp, updateDoc } from "firebase/firestore";
 import { auth, db } from "../Config/firebaseconfig"
 
 const MainTodo = () => {
@@ -58,20 +58,31 @@ const MainTodo = () => {
         }
 
     };
+    const deleteTodo = async (i) => {
+        const todoToDelete = todo[i];
+        if (todoToDelete) {
+            await deleteDoc(doc(db, "todos", todoToDelete.id));
+            console.log("Data deleted");
+            setTodo((prev) => prev.filter((_, index) => index !== i)); // Update state to remove deleted todo
+        }
+    };
 
-    function deleteTodo(i) {
-        console.log(i);
-        
-    //     todo.splice(i, 1);
-    //     setTodo([...todo]);
-    }
-
-    function editTodo(i) {
-        console.log(i);
-    //     let editTodoValue = prompt(`Enter new value`, todo[i]);
-    //     todo.splice(i, 1, editTodoValue);
-    //     setTodo([...todo]);
-    }
+    const editTodo = async (i) => {
+        const todoToEdit = todo[i];
+        if (todoToEdit) {
+            const updatedNewTitle = prompt("Enter new title", todoToEdit.newTodoValue);
+            if (updatedNewTitle !== null && updatedNewTitle.trim() !== "") {
+                const dataUpdate = doc(db, "todos", todoToEdit.id);
+                await updateDoc(dataUpdate, { newTodoValue: updatedNewTitle });
+                setTodo((prev) => {
+                    const newTodos = [...prev];
+                    newTodos[i].newTodoValue = updatedNewTitle; // Update the specific todo
+                    return newTodos;
+                });
+                console.log("Data updated");
+            }
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex flex-col items-center">
