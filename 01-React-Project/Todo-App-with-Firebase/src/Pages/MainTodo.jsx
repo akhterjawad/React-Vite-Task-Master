@@ -60,6 +60,7 @@ const MainTodo = () => {
     };
     const deleteTodo = async (i) => {
         const todoToDelete = todo[i];
+        // newTodo=''
         if (todoToDelete) {
             await deleteDoc(doc(db, "todos", todoToDelete.id));
             console.log("Data deleted");
@@ -70,13 +71,15 @@ const MainTodo = () => {
     const editTodo = async (i) => {
         const todoToEdit = todo[i];
         if (todoToEdit) {
-            const updatedNewTitle = prompt("Enter new title", todoToEdit.newTodoValue);
-            if (updatedNewTitle !== null && updatedNewTitle.trim() !== "") {
+            console.log('edit start',i);
+            
+            const updatedTodo = TodoValue.current.value;
+            if (updatedTodo !== null && updatedTodo.trim() !== "") {
                 const dataUpdate = doc(db, "todos", todoToEdit.id);
-                await updateDoc(dataUpdate, { newTodoValue: updatedNewTitle });
+                await updateDoc(dataUpdate, { newTodoValue: updatedTodo });
                 setTodo((prev) => {
                     const newTodos = [...prev];
-                    newTodos[i].newTodoValue = updatedNewTitle; // Update the specific todo
+                    newTodos[i].newTodoValue = updatedTodo; // Update the specific todo
                     return newTodos;
                 });
                 console.log("Data updated");
