@@ -143,6 +143,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
+import Swal from 'sweetalert2';
 import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, Timestamp, updateDoc } from "firebase/firestore";
 import { auth, db } from "../Config/firebaseconfig"
 
@@ -155,7 +156,7 @@ const MainTodo = () => {
 
     useEffect(() => {
         async function GetDataFromFirestore() {
-            const todosQuery = query(collection(db, "todos"), orderBy("time", "desc"));
+            const todosQuery = query(collection(db, "todos"), orderBy("time", "asc"));
             const querySnapshot = await getDocs(todosQuery);
             const todosArray = [];
             querySnapshot.forEach((doc) => {
@@ -205,7 +206,11 @@ const MainTodo = () => {
             }
             setCurrentTodo('');  // Clear input after adding or editing
         } else {
-            alert(`Please enter something first`);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please enter something first!',
+            });
         }
     };
 
@@ -224,10 +229,10 @@ const MainTodo = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex flex-col items-center">
+        <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex flex-col items-center ">
             <Navbar />
-            <div className="w-full max-w-md p-4 bg-white shadow-lg rounded-lg mt-10">
-                <form onSubmit={addTodo} className="flex gap-2 mb-6">
+            <div className="ml-0 sm:ml-5 mr-0 sm:mr-5 w-full max-w-md p-4 bg-white shadow-lg rounded-lg mt-10">
+                <form onSubmit={addTodo} className=" flex gap-2 mb-6">
                     <input
                         type="text"
                         placeholder="Add a todo"

@@ -13,6 +13,12 @@
                 user experience. Keep tasks simple and stay organized!"</span>
         </li><br />
         <li>
+            <a href="https://todo-app-firebase-1221.web.app/">Todo-App-with-Firebase,React + Vite + JS</a><span> "Built a responsive Todo app with Firebase for seamless task management and real-time updates."</span>
+        </li><br />
+        <li>
+            <a href="https://todo-app-with-redux-main.netlify.app/">Todo-App-with-Redux-Toolkit-&-React + Vite + JS</a><span> "Stay organized with this sleek, responsive Todo app built using React, Redux Toolkit, and LocalStorage for efficient state management and seamless task tracking."</span>
+        </li><br />
+        <li>
             <a href="https://weather-app-ultra.netlify.app/">Weather-App-with-React + Vite + JS</a><span> "Experience real-time weather updates with this sleek, responsive app built using React, HTML5, CSS3, and TailwindCSS for seamless performance and modern design."</span>
         </li>
         <br />
