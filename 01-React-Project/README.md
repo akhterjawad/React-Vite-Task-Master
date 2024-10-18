@@ -41,9 +41,17 @@
         </li><br /> <br />
         <li>
             <a href="https://contact-app-ui.netlify.app/">Contact-App-UI with-React + Vite + JS</a><span> "A clean and responsive contact app UI designed with React, Vite, daisyUI, TailwindCSS, and MaterialUI for seamless user interactions."</span>
-        </li><br /> <br /><ul><li>
+            <ul>
+                <li><a
+                        href="https://www.figma.com/file/rephrU2FVgN8MFz6XhnP51/Learn-React-with-10-Projects?type=design&node-id=2-5&t=HfzxeipioOu1jOmh-0">Here
+                        is the link of Brand UI figma file!</a></li><br /> <br />
+            </ul>
+        </li>
+        <br /> <br />
+        <li>
             <a href="https://gym-admission.netlify.app/">Gym admission app with-React + Vite + JS</a><span> "An interactive and responsive gym admission app built with React, featuring conditional rendering for seamless user experience."</span>
-        </li></ul><br /> <br />
+        </li>
+        <br /> <br />
         <li>
             <a href="https://todo-app-with-redux-main.netlify.app/">Todo-App-with-Redux-Toolkit-&-React + Vite + JS</a><span> "Stay organized with this sleek, responsive Todo app built using React, Redux Toolkit, and LocalStorage for efficient state management and seamless task tracking."</span>
         </li>
