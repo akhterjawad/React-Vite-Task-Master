@@ -173,13 +173,13 @@ const MainTodo = () => {
         const newTodo = currentTodo;  // Use state for both add and edit
         if (newTodo) {
             if (isEditing) {
-                console.log(isEditing,'isEditing');
-                
+                console.log(isEditing, 'isEditing');
+
                 // Editing existing todo
                 const todoToEdit = todo[editIndex];
                 if (todoToEdit) {
-                    console.log(todoToEdit,'todoToEdit',todo[editIndex],'todo[editIndex]');
-                    
+                    console.log(todoToEdit, 'todoToEdit', todo[editIndex], 'todo[editIndex]');
+
                     const dataUpdate = doc(db, "todos", todoToEdit.id);
                     await updateDoc(dataUpdate, { newTodoValue: newTodo });
                     setTodo((prev) => {
